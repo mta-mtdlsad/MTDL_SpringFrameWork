@@ -6,23 +6,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class Greeter {
     private String name;
+    @Autowired                              //field injection :: Not Preferred
     private HelloMessage helloMessage;
 
-    public Greeter() {
-        System.out.println("Creating object of Greeter");
-    }
+//    public Greeter(HelloMessage helloMessage) {   // constructor injection :: Most preferred
+//        System.out.println("Creating object of Greeter");
+//        this.helloMessage = helloMessage;
+//    }
 
-    @Autowired
-    public Greeter(HelloMessage helloMessage) {
-        System.out.println("Creating Greeter Object - HelloMessage");
-        this.helloMessage = helloMessage;
-    }
+//    @Autowired                            //setter injection :: Less Preferred
+//    public void setHelloMessage(HelloMessage helloMessage) {
+//        this.helloMessage = helloMessage;
+//    }
 
-    public Greeter(String name, HelloMessage helloMessage) {
-        System.out.println("Creating Greeter Object - name, HelloMessage");
-        this.name = name;
-        this.helloMessage = helloMessage;
-    }
+    /*
+        Most Preferred :: Constructor Injection
+
+    */
 
     public String greeting(){
         return helloMessage.getMessage()+"How are you?";
