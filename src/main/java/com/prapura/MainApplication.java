@@ -21,13 +21,5 @@ public class MainApplication {
         Greeter greeter = factory.getBean(Greeter.class);
         System.out.println("Address of First Object "+greeter);
         System.out.println(greeter.greeting());
-
-        greeter = factory.getBean(Greeter.class);
-        System.out.println("Address of Second Object "+greeter);
-        System.out.println(greeter.greeting());
-
-        greeter = factory.getBean(Greeter.class);
-        System.out.println("Address of Third Object "+greeter);
-        System.out.println(greeter.greeting());
     }
 }

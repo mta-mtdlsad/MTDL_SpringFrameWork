@@ -1,9 +1,12 @@
 package com.prapura.utils;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelloMessage {
+@Primary
+public class HelloMessage implements Message{
     public HelloMessage() {
         System.out.println("Creating object of Hello Message");
     }
