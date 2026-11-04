@@ -1,6 +1,5 @@
 package com.prapura.utils;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,7 +8,6 @@ public class Greeter {
 
     //public Greeter(@Qualifier("heyMessage") Message message) {
     public Greeter(Message message) {
-        System.out.println("\nCreating Object of Greeter");
         this.message = message;
     }
 

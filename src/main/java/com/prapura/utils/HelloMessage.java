@@ -7,10 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 @Primary
 public class HelloMessage implements Message{
-    public HelloMessage() {
-        System.out.println("Creating object of Hello Message");
-    }
-
     public String getMessage() {
         return "Hello, ";
     }
