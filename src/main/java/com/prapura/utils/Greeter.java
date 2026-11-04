@@ -19,11 +19,6 @@ public class Greeter {
 //        this.helloMessage = helloMessage;
 //    }
 
-    /*
-        Most Preferred :: Constructor Injection
-
-    */
-
     public String greeting(){
         return helloMessage.getMessage()+"How are you?";
     }
